@@ -1,0 +1,2 @@
+include ':app', ':pagination'
+rootProject.name='PageSample'
