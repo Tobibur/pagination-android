@@ -26,9 +26,9 @@ dependencies {
 [![](https://jitpack.io/v/Tobibur/pagination-android.svg)](https://jitpack.io/#Tobibur/pagination-android)
 
 ### Usage
-* Implement your activity or fragment with `PaginationInterface` interface.
+* Implement your activity or fragment with `PageListener` interface.
 ```kotlin
-class MainActivity : AppCompatActivity(), PaginationInterface {
+class MainActivity : AppCompatActivity(), PageListener {
 
   override fun onPagination(page: Int) {
     //page updates will be here
