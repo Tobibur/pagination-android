@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.tobibur.pagesample.data.Item
 import com.tobibur.pagesample.network.RetrofitInstance
-import com.tobibur.pagination.PaginationInterface
+import com.tobibur.pagination.PageListener
 import com.tobibur.pagination.PaginationUtils
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.CoroutineScope
@@ -16,7 +16,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class MainActivity : AppCompatActivity(), PaginationInterface {
+class MainActivity : AppCompatActivity(), PageListener {
 
     private lateinit var recAdapter: ReposAdapter
     private val mService = RetrofitInstance.apiService

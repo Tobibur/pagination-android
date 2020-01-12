@@ -9,7 +9,7 @@ object PaginationUtils {
     private var page = 1
 
     fun initPagination(mRecycler: RecyclerView, mLayoutManager: LinearLayoutManager,
-                       paginationInterface: PaginationInterface) {
+                       pageListener: PageListener) {
         mRecycler.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
@@ -26,7 +26,7 @@ object PaginationUtils {
 
                 if (isScrolling && (currentItems + scrolledOutItems == totalItems)) {
                     isScrolling = false
-                    paginationInterface.onPagination(++page)
+                    pageListener.onPagination(++page)
                 }
             }
         })

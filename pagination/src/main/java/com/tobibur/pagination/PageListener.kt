@@ -1,5 +1,5 @@
 package com.tobibur.pagination
 
-interface PaginationInterface {
+interface PageListener {
     fun onPagination(page:Int)
 }
